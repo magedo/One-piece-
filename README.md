@@ -1,34 +1,34 @@
-package com.firstandroidapp;
+     package com.firstandroidapp;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.util.Log;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-import android.widget.ImageView;
+    import android.content.Intent;
+    import android.os.Bundle;
+    import android.support.v4.app.Fragment;
+    import android.util.Log;
+    import android.view.LayoutInflater;
+    import android.view.View;
+    import android.view.ViewGroup;
+    import android.widget.ImageView;
 
-import com.facebook.Session;
-import com.facebook.SessionState;
-import com.facebook.UiLifecycleHelper;
-import com.facebook.widget.LoginButton;
+        import com.facebook.Session;
+        import com.facebook.SessionState;
+        import com.facebook.UiLifecycleHelper;
+        import com.facebook.widget.LoginButton;
 
 
-public class MainFragment extends Fragment {
-    private static final String TAG = "MainFragment";
-    private UiLifecycleHelper uiHelper;
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-      View view = inflater.inflate(R.layout.main, container, false);
-        LoginButton authButton = (LoginButton) view.findViewById(R.id.authButton);
-        authButton.setFragment(this);
+        public class MainFragment extends Fragment {
+       private static final String TAG = "MainFragment";
+       private UiLifecycleHelper uiHelper;
+       @Override
+       public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+         View view = inflater.inflate(R.layout.main, container, false);
+           LoginButton authButton = (LoginButton) view.findViewById(R.id.authButton);
+           authButton.setFragment(this);
 
         return view;
     }
 
-    private void onSessionStateChange(Session session, SessionState state, Exception exception) {
-        if (state.isOpened()) {
+        private void onSessionStateChange(Session session, SessionState state, Exception exception) {
+          if (state.isOpened()) {
         	
             Log.w(TAG, "Logged in...");
         } else if (state.isClosed()) {
@@ -95,18 +95,18 @@ _________________________________________________
 
 Camera API Code: 
 
-package com.firstandroidapp;
+     package com.firstandroidapp;
 
 
-import android.app.Activity;
-import android.content.Intent;
-import android.graphics.Bitmap;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.ImageView;
+     import android.app.Activity;
+     import android.content.Intent;
+     import android.graphics.Bitmap;
+     import android.os.Bundle;
+     import android.view.View;
+     import android.widget.Button;
+     import android.widget.ImageView;
 
-public class MyCameraActivity extends Activity {
+      public class MyCameraActivity extends Activity {
     private static final int CAMERA_REQUEST = 1888; 
     private ImageView imageView;
 
